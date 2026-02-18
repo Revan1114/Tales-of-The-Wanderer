@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tales of The Wanderer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="start-screen">
+    <h1>Tales of The Wanderer</h1>
+    <p>Open World Survival 3D</p>
+    <div id="controls">
+      WASD = Bergerak · Mouse = Lihat sekitar · E = Ambil/Tebang · F = Makan
+    </div>
+    <button id="start-btn" type="button">Mulai Petualangan</button>
+  </div>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="health-bar">
+        <span>❤ Health</span>
+        <div class="bar"><div id="health-fill" class="fill"></div></div>
+      </div>
+      <div id="hunger-bar">
+        <span>🍖 Hunger</span>
+        <div class="bar"><div id="hunger-fill" class="fill"></div></div>
+      </div>
+      <div id="inventory">
+        <div class="inv-slot" data-slot="0">🌿 0</div>
+        <div class="inv-slot" data-slot="1">🪵 0</div>
+        <div class="inv-slot" data-slot="2">🪨 0</div>
+        <div class="inv-slot" data-slot="3">🥩 0</div>
+      </div>
+      <div id="craft-panel">
+        <button id="craft-campfire">🔥 Campfire (5🪵)</button>
+        <button id="craft-axe">🪓 Axe (3🪵 2🪨)</button>
+      </div>
+      <div id="minimap"></div>
+      <div id="time-display">☀️ Day 1 - 06:00</div>
+    </div>
+  </div>
+
+  <!-- Tutorial / Panduan Awal (tersembunyi sampai game dimulai & pertama kali) -->
+  <div id="tutorial-overlay" class="hidden">
+    <div id="tutorial-box">
+      <h2 id="tutorial-title">Selamat Datang!</h2>
+      <p id="tutorial-text">Petualanganmu dimulai di sini. Ikuti panduan singkat ini untuk memulai perjalananmu.</p>
+      <div id="tutorial-nav">
+        <button id="tutorial-prev">← Sebelumnya</button>
+        <span id="tutorial-page">1 / 5</span>
+        <button id="tutorial-next">Selanjutnya →</button>
+      </div>
+      <button id="tutorial-skip">Lewati panduan</button>
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>

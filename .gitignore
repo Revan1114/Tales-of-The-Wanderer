@@ -1,0 +1,18 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Engine / Build (akan disesuaikan nanti)
+# Godot
+.godot/
+export/
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+
+# Node / Web
+node_modules/
